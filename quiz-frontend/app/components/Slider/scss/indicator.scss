@@ -1,0 +1,37 @@
+$normal-size: 9px;
+$selected-size: 14px;
+$left-right-margin: 7px;
+
+$normal-color: #aaa;
+$passed-color: white;
+
+ol.slide-dots {
+  width: 80%;
+  padding: 0;
+  margin: auto;
+  list-style: none;
+
+  li.dot{
+    display: inline-block;
+    width: $normal-size;
+    height: $normal-size;
+    margin: 0 $left-right-margin 3px $left-right-margin;
+    background: $normal-color;
+    border-radius: 50%;
+    filter: alpha(opacity=25);
+    box-shadow: 1px 1px 4px grey;
+  }
+
+  li.selected {
+    background: $passed-color;
+    width: $selected-size;
+    height: $selected-size;
+    margin-bottom: 1px;
+    cursor: pointer;
+  }
+
+  li.answered {
+    background: $passed-color;
+    cursor: pointer;
+  }
+}

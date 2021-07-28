@@ -1,0 +1,43 @@
+$skew: 12deg;
+$rotate: 45deg;
+$arrow-width: 0.2em;
+$main-color: #1a8cff;
+
+.skip-btn{
+  display: flex;
+  cursor: pointer;
+  color: $main-color;
+  float: right;
+  
+  .arrow {
+    border: solid $main-color;
+    border-width: 0 $arrow-width $arrow-width 0;
+    padding: 5px;
+  
+    height: 13px;
+    width: 13px;
+    margin-top: 6px;
+  
+    transform: rotate(-$rotate) skew($skew, $skew);
+    -webkit-transform: rotate(-$rotate) skew($skew, $skew);
+  }
+
+  .label {
+    margin-right: 20px;
+    font-weight: 700;
+  }
+
+  transform: translateX(0px);
+  transition: 0.3s ease-in-out;
+}
+
+.skip-btn:hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
